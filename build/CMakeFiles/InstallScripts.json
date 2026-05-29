@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/h1bash/clone/opengl-triangle/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
