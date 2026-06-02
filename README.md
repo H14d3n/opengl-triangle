@@ -5,3 +5,5 @@
 ## How to build using cmake
 
 ```bash
+cmake
+```
