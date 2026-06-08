@@ -1,0 +1,6 @@
+/home/localadmin/clone/opengl-triangle/build-local/CMakeFiles/glad_gl_core_33.dir
+/home/localadmin/clone/opengl-triangle/build-local/CMakeFiles/OpenGLProject.dir
+/home/localadmin/clone/opengl-triangle/build-local/CMakeFiles/edit_cache.dir
+/home/localadmin/clone/opengl-triangle/build-local/CMakeFiles/rebuild_cache.dir
+/home/localadmin/clone/opengl-triangle/build-local/include/glad/cmake/CMakeFiles/edit_cache.dir
+/home/localadmin/clone/opengl-triangle/build-local/include/glad/cmake/CMakeFiles/rebuild_cache.dir
