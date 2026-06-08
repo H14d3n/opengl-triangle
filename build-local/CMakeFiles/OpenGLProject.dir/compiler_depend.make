@@ -22,6 +22,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -29,6 +30,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/c++/15/bits/exception.h \
   /usr/include/c++/15/bits/exception_defines.h \
   /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/fstream.tcc \
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
@@ -54,6 +56,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/c++/15/bits/range_access.h \
   /usr/include/c++/15/bits/refwrap.h \
   /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algobase.h \
   /usr/include/c++/15/bits/stl_construct.h \
@@ -87,6 +90,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/c++/15/ext/numeric_traits.h \
   /usr/include/c++/15/ext/string_conversions.h \
   /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/fstream \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/ios \
   /usr/include/c++/15/iosfwd \
@@ -95,6 +99,7 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/c++/15/new \
   /usr/include/c++/15/ostream \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/sstream \
   /usr/include/c++/15/stdexcept \
   /usr/include/c++/15/streambuf \
   /usr/include/c++/15/string \
@@ -185,8 +190,10 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o: /home/localadmin/clone/opengl-trian
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/ctype_base.h \
@@ -276,11 +283,15 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h:
 
+/usr/include/x86_64-linux-gnu/c++/15/bits/basic_file.h:
+
 /usr/include/x86_64-linux-gnu/c++/15/bits/atomic_word.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/c++/15/bits/c++io.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
@@ -317,8 +328,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -370,11 +379,15 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/usr/include/c++/15/bits/stl_iterator.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/alloca.h:
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
-/usr/include/features.h:
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
 /usr/include/c++/15/ostream:
 
@@ -388,11 +401,11 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 
 /usr/include/c++/15/typeinfo:
 
+/usr/include/c++/15/bits/sstream.tcc:
+
+/usr/include/linux/stddef.h:
+
 /usr/include/c++/15/bits/ostream.tcc:
-
-/usr/lib/x86_64-linux-gnu/libmvec.so.1:
-
-/usr/include/c++/15/bits/ostream.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -414,6 +427,8 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 
 /usr/include/c++/15/bits/alloc_traits.h:
 
+/usr/include/c++/15/bits/fstream.tcc:
+
 /usr/include/c++/15/type_traits:
 
 /usr/include/c++/15/bits/refwrap.h:
@@ -426,10 +441,6 @@ CMakeFiles/OpenGLProject.dir/src/main.cpp.o:
 
 /usr/include/c++/15/bits/range_access.h:
 
-/usr/include/c++/15/bits/locale_facets.tcc:
-
-/usr/include/ctype.h:
-
 /usr/include/c++/15/bits/stl_construct.h:
 
 libglad_gl_core_33.a:
@@ -437,6 +448,12 @@ libglad_gl_core_33.a:
 /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h:
 
 /usr/include/c++/15/bits/cxxabi_init_exception.h:
+
+/usr/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/c++/15/bits/ostream.h:
+
+/usr/include/c++/15/fstream:
 
 /usr/include/c++/15/iostream:
 
@@ -462,6 +479,14 @@ libglad_gl_core_33.a:
 
 /home/localadmin/clone/opengl-triangle/src/main.cpp:
 
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/c++/15/bits/codecvt.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/15/bits/stl_iterator.h:
+
 /usr/include/c++/15/bits/postypes.h:
 
 /usr/include/c++/15/bits/hash_bytes.h:
@@ -469,6 +494,12 @@ libglad_gl_core_33.a:
 /usr/include/c++/15/bits/locale_classes.tcc:
 
 /usr/include/GLFW/glfw3.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/home/localadmin/clone/opengl-triangle/include/KHR/khrplatform.h:
+
+/usr/include/c++/15/bits/locale_classes.h:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -494,12 +525,6 @@ libglad_gl_core_33.a:
 
 /usr/include/c++/15/initializer_list:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
-/usr/include/c++/15/bits/locale_classes.h:
-
-/home/localadmin/clone/opengl-triangle/include/KHR/khrplatform.h:
-
 gladsources/glad_gl_core_33/include/glad/gl.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
@@ -515,6 +540,12 @@ gladsources/glad_gl_core_33/include/glad/gl.h:
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
 /usr/include/c++/15/bits/stl_iterator_base_types.h:
+
+/usr/include/ctype.h:
+
+/usr/include/c++/15/bits/locale_facets.tcc:
+
+/usr/include/features.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -598,6 +629,14 @@ gladsources/glad_gl_core_33/include/glad/gl.h:
 
 /usr/include/c++/15/cstdio:
 
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/c++/15/bits/requires_hosted.h:
+
+/usr/include/c++/15/bits/locale_facets.h:
+
+/usr/include/c++/15/cstdlib:
+
 /usr/include/c++/15/bits/functional_hash.h:
 
 /usr/include/c++/15/ext/type_traits.h:
@@ -617,6 +656,8 @@ gladsources/glad_gl_core_33/include/glad/gl.h:
 /usr/include/c++/15/ext/atomicity.h:
 
 /usr/include/c++/15/ext/numeric_traits.h:
+
+/usr/include/c++/15/sstream:
 
 /usr/include/c++/15/ios:
 
@@ -650,8 +691,6 @@ gladsources/glad_gl_core_33/include/glad/gl.h:
 
 /usr/include/linux/sched/types.h:
 
-/usr/include/linux/stddef.h:
-
 /usr/lib/linux/uapi/x86/asm/posix_types_64.h:
 
 /usr/include/c++/15/ext/alloc_traits.h:
@@ -675,21 +714,3 @@ gladsources/glad_gl_core_33/include/glad/gl.h:
 /usr/include/c++/15/bits/ios_base.h:
 
 /usr/include/wchar.h:
-
-/usr/include/c++/15/bits/requires_hosted.h:
-
-/usr/include/c++/15/bits/locale_facets.h:
-
-/usr/include/c++/15/cstdlib:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:

@@ -2,11 +2,17 @@
 #include <GLFW/glfw3.h>
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+#define PATH_FRAGMENT_SHADER "src/shaders/fragment.glsl"
+#define PATH_VERTEX_SHADER "src/shaders/vertex.glsl"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
-unsigned int initVertexShader();
-unsigned int initFragmentShader();
+static std::string loadFile(const std::string &path);
+unsigned int compileShader(unsigned int type, const std::string &source);
 
 // constants
 const unsigned int SCR_WIDTH = 800;
@@ -65,9 +71,13 @@ int main()
     glEnableVertexAttribArray(0);
     glBindVertexArray(0);
 
-    // Initialise our shaders
-    unsigned int vertexShader = initVertexShader();
-    unsigned int fragmentShader = initFragmentShader();
+    // Initialise our shaders using our new custom shader loading and compiling functions
+    std::string vertexShaderSource = loadFile(PATH_VERTEX_SHADER);
+    std::string fragmentShaderSource = loadFile(PATH_FRAGMENT_SHADER);
+
+    unsigned int vertexShader = compileShader(GL_VERTEX_SHADER, vertexShaderSource);
+    unsigned int fragmentShader = compileShader(GL_FRAGMENT_SHADER, fragmentShaderSource);
+
     // Check if successful
     if (vertexShader == 0 || fragmentShader == 0)
     {
@@ -123,57 +133,40 @@ int main()
     return 0;
 }
 
-unsigned int initVertexShader()
+static std::string loadFile(const std::string &path)
 {
-    // vertex shader
-    int shader_success;
-    char shader_infoLog[512];
-    const char *vertexShaderSource = "#version 330 core\n"
-        "layout (location = 0) in vec3 aPos;\n"
-        "void main()\n"
-        "{\n"
-        "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-        "}\0";
-        
-    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
+    std::ifstream in(path);
 
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &shader_success);
-    if (!shader_success)
+    if (!in.is_open())
     {
-        glGetShaderInfoLog(vertexShader, 512, NULL, shader_infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << shader_infoLog << std::endl;
-        return 0;
+        return std::string();
     }
-    return vertexShader;
+
+    std::ostringstream ss;
+    ss << in.rdbuf();
+
+    return ss.str();
 }
 
-unsigned int initFragmentShader()
-{
-    // fragment shader
+unsigned int compileShader(unsigned int type, const std::string &source)
+ {
+    const char *shaderSource = source.c_str();
+    unsigned int shader = glCreateShader(type);
+    glShaderSource(shader, 1, &shaderSource, NULL);
+    glCompileShader(shader);
+
     int shader_success;
     char shader_infoLog[512];
-    const char *fragmentShaderSource = "#version 330 core\n"
-        "out vec4 FragColor;\n"
-        "void main()\n"
-        "{\n"
-        "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-        "}\n\0";
-
-    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &shader_success);
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &shader_success);
     if (!shader_success)
     {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, shader_infoLog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << shader_infoLog << std::endl;
+        glGetShaderInfoLog(shader, 512, NULL, shader_infoLog);
+        std::cerr << "ERROR::SHADER::COMPILATION_FAILED\n" << shader_infoLog << std::endl;
+        glDeleteShader(shader);
         return 0;
     }
-    return fragmentShader;
-}
+    return shader;
+ }
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 void processInput(GLFWwindow *window)
