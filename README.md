@@ -1,9 +1,11 @@
-# OpenGL - Template
-
-**`Edit Me`*
-
+# OpenGL Triangle
 ## How to build using cmake
 
 ```bash
-cmake
+cmake -S . -B build-local && cmake --build build-local
+```
+
+## Run
+```bash
+./build-local/OpenGLProject
 ```
